@@ -22,6 +22,7 @@ const gif = require("gif-search");
 const client = new Discord.Client({disableEveryone: true});
 
 const prefix = "+";
+
 client.on("ready", async () => {
     if(client.users.size > 1) {
         client.user.setActivity(`Prefix +`);
