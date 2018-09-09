@@ -20,13 +20,13 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "+");
+const prefix = "+";
 /////////////////////////
 ////////////////////////
 
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(prefix)) return undefined;
+    if (!msg.content.startsWith("+")) return undefined;
     
     let args = msg.content.split(' ');
 
@@ -48,7 +48,7 @@ client.on('message', async msg =>{
 //////////////////////
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(prefix)) return undefined;
+    if (!msg.content.startsWith("+")) return undefined;
     
     let args = msg.content.split(' ');
 
@@ -88,7 +88,7 @@ client.on('message', async msg =>{
 //////////////////////
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(prefix)) return undefined;
+    if (!msg.content.startsWith("+")) return undefined;
     
     const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
@@ -312,4 +312,4 @@ function play(guild, song) {
 }
 
 
-client.login(process.env.BOT_TOKEN);
+client.login("NDg3OTMwNzM2ODAwODI1MzU0.Dnapog.uQm27sMWm91GnYcKHM5GjEeiKqI");
