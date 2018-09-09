@@ -1,4 +1,3 @@
-
 const Discord = require('discord.js');
 
 const Util = require('discord.js');
@@ -21,27 +20,13 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "+";
+const prefix = "+");
+/////////////////////////
+////////////////////////
 
-client.on("ready", async () => {
-    if(client.users.size > 1) {
-        client.user.setActivity(`Prefix +`);
-        console.log(`Prefix +`)
-    } else {
-        client.user.setActivity(`Prefix +`);
-        console.log(`Prefix +`)
-    }
-    client.user.setStatus("online");
-});
-
-
-
-client.on("message", async () => {
-  
-})
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith("+")) return undefined;
+    if (!msg.content.startsWith(prefix)) return undefined;
     
     let args = msg.content.split(' ');
 
@@ -63,7 +48,7 @@ client.on('message', async msg =>{
 //////////////////////
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(+)) return undefined;
+    if (!msg.content.startsWith(prefix)) return undefined;
     
     let args = msg.content.split(' ');
 
@@ -103,7 +88,7 @@ client.on('message', async msg =>{
 //////////////////////
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith('+')) return undefined;
+    if (!msg.content.startsWith(prefix)) return undefined;
     
     const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
@@ -326,4 +311,5 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`**${song.title}**, is now playing!`);
 }
 
-client.login("NDg3OTMwNzM2ODAwODI1MzU0.DnaSrw.6OeEqg5zcdftvpCbmGCrflHNTLg");
+
+client.login(process.env.BOT_TOKEN);
