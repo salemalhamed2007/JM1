@@ -33,23 +33,7 @@ client.on("ready", async () => {
     client.user.setStatus("online");
 });
 
-client.on("guildCreate", guild => {
-    console.log("Joined a new guild: " + guild.name);
-    if(client.users.size > 1) {
-        client.user.setActivity(`Prefix +`);
-    } else {
-        client.user.setActivity(`Prefix +`);
-    }
-});
 
-client.on("guildDelete", guild => {
-    console.log("Left a guild: " + guild.name);
-    if(client.users.size > 1) {
-        client.user.setActivity(`Prefix +`);
-    } else {
-        client.user.setActivity(`Prefix +`);
-    }
-});
 
 client.on("message", async () => {
   
